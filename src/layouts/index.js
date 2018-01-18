@@ -13,6 +13,9 @@ const TemplateWrapper = ({ children }) => (
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      script={[
+        { "src": "https://identity.netlify.com/v1/netlify-identity-widget.js", "type": "text/javascript" }
+      ]}
     />
     <Header />
     <div
@@ -25,6 +28,17 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+</script>
   </div>
 )
 
