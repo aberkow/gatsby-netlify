@@ -4,6 +4,6 @@ node_modules
 .cache/
 # Build directory
 public/*
-!public/admin/
+!public/admin
 .DS_Store
 yarn-error.log
