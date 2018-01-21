@@ -19,7 +19,6 @@ export const aboutQuery = graphql`
       html
       frontmatter {
         title
-        content
         thumbnail
       }
     }
