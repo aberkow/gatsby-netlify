@@ -23,8 +23,9 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "about"
     label: "About Page"
-    file: "src/pages/about.md"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Page Content", name: "content", widget: "markdown" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+    files:
+      - file: "src/pages/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Page Content", name: "content", widget: "markdown" }
+          - { label: "Featured Image", name: "thumbnail", widget: "image" }
