@@ -5,6 +5,7 @@ process.on('unhandledRejection', (reason, promise) => { console.log(`Reason -> $
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators;
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`);
+  const aboutPageTemplate = path.resolve('src/templates/about-page.js');
 
   return graphql(`{
     allMarkdownRemark {
@@ -24,20 +25,21 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
   }`).then(result => {
     if (result.errors) {
-      console.log(`result of error -> ${result}`);
       return Promise.reject(result.errors);
     }
-    console.log(result, 'result');
     const posts = result.data.allMarkdownRemark.edges;
-    console.log(posts, 'posts');
     posts
       .forEach(({ node }) => {
-      console.log(node, 'node');
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}
       });
+      createPage({
+        path: '/about',
+        component: aboutPageTemplate,
+        context: {}
+      })
     });
   })
 }
