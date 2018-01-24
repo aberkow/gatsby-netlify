@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-post
 title: Soccer!!!
 path: /soccer
 date: 2018-01-20T04:10:00.799Z

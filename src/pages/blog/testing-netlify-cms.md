@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: blog-post
 title: testing netlify cms
 path: /testing-netlify-cms
 date: 2018-01-18T02:07:54.933Z
