@@ -30,5 +30,6 @@ collections:
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "about-page" }
           - { label: "Title", name: "title", widget: "string" }
+          - { label: "Path", name: "path", widget: "string" }
           - { label: "Page Content", name: "content", widget: "markdown" }
           - { label: "Featured Image", name: "thumbnail", widget: "image" }
