@@ -35,11 +35,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         component: blogPostTemplate,
         context: {}
       });
-      createPage({
-        path: '/about',
-        component: aboutPageTemplate,
-        context: {}
-      })
+      // createPage({
+      //   path: '/about',
+      //   component: aboutPageTemplate,
+      //   context: {}
+      // })
     });
   })
 }
