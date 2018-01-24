@@ -28,6 +28,7 @@ collections:
         name: "about"
         label: "About Page"
         fields:
+          - { label: "Layout", name: "layout", widget: "hidden", default: "about" }
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Page Content", name: "content", widget: "markdown" }
           - { label: "Featured Image", name: "thumbnail", widget: "image" }
